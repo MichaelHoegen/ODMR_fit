@@ -15,10 +15,7 @@ import matplotlib.pyplot as plt
 import pyqtgraph as pg
 from pyqtgraph import PColorMeshItem, ScatterPlotItem
 
-# sys.path.append(r'/Users/michael/Library/CloudStorage/OneDrive-Personal/')
-# import fun_michael as fun
-
-pen = pg.mkPen(color='r', width=5, style=QtCore.Qt.DashLine)
+pen = pg.mkPen(color='r', width=3, style=QtCore.Qt.DashLine)
 
 
 # plt.rcParams.update({'font.size':8})
