@@ -1,0 +1,1393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>910</width>
+    <height>707</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(50, 53, 56);
+</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">GLOBAL_STYLE = QLabel {
+    color: rgb(101, 139, 247); 
+}</string>
+   </property>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>221</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_7">
+     <item row="3" column="0">
+      <widget class="QPushButton" name="filebutton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+       </property>
+       <property name="text">
+        <string>Load File</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QProgressBar" name="testProg">
+       <property name="styleSheet">
+        <string notr="true">QProgressBar {
+    border:6px ;
+    border-radius: 4px;
+	border-width: 4px;
+	border-color: beige;
+	text-align: center
+}
+
+QProgressBar::chunk {
+    background-color: green;
+    width: 20px;
+	margin: 0.5px;
+}</string>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="fitButton">
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+       </property>
+       <property name="text">
+        <string>Fit data</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QRadioButton" name="neighborSearch">
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(101, 139, 247);</string>
+       </property>
+       <property name="text">
+        <string>Neighbor Search?</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="nanButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+       </property>
+       <property name="text">
+        <string>Insert NaN</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="nextCol">
+         <property name="font">
+          <font>
+           <pointsize>-1</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Next Col</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="prevCol">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Prev Col</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nextRow">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Next row</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="prevRow">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777162</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Prev row</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>320</y>
+      <width>441</width>
+      <height>357</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <property name="spacing">
+      <number>-1</number>
+     </property>
+     <property name="bottomMargin">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QTabWidget" name="FitOption">
+       <property name="styleSheet">
+        <string notr="true">QTabWidget::pane {
+  border: 4px solid rgb(101, 139, 247);
+  top:-1px; 
+   border-width: 2px;
+    border-radius: 7px;
+  background: rgb(245, 245, 245);; 
+} 
+
+QTabBar::tab {
+  background:rgb(49, 52, 55) ; 
+font: bold;
+  border: 2px solid rgb(81, 112, 198); 
+    border-width: 2px;
+    border-radius: 7px;
+	color:rgb(101, 139, 247);
+  padding: 8px;
+} 
+
+
+QTabBar::tab:selected { 
+	color:rgb(101, 139, 247);
+  background:rgb(70, 75, 79); 
+    border-width: 2px;
+    border-radius: 7px;
+  margin-bottom: -1px; 
+}
+
+QLabel {
+    color: rgb(101, 139, 247); 
+}
+
+QLineEdit {
+	color: rgb(101, 139, 247); 
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="OneDip">
+        <attribute name="title">
+         <string>One Dip</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QGroupBox{
+	border-style:solid;
+    border-width: 4px;
+	  border-width: 2px;
+    border-radius: 7px;
+	border-color: rgb(101, 139, 247);
+
+
+}</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(101, 139, 247)</string>
+                </property>
+                <property name="text">
+                 <string>Frequency Guess (GHz)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="freqIn">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>2.87</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Amp Guess </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="ampIn">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>0.05</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2">
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Linewidth Guess (MHz)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineIn">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>1.5</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QGroupBox" name="groupBox">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QGroupBox{
+	border-style:solid;
+    border-width: 4px;
+	  border-width: 2px;
+    border-radius: 7px;
+	border-color: rgb(101, 139, 247);
+
+
+}</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Linewidth low (MHz)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineLow">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>contrast low</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="contrastLow">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>0.009</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="2">
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Norm amp low</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="ampLow">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Linewidth hi (MHz)</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineHi">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>25</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>contrast hi</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="contrastHi">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>0.3</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="2">
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Norm amp hi</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="ampHi">
+                <property name="font">
+                 <font>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+ 
+    selection-background-color: darkgray;
+}</string>
+                </property>
+                <property name="text">
+                 <string>2.0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Nuclear">
+        <property name="styleSheet">
+         <string notr="true">QLabel:{color: rgb(101, 139, 247);}
+</string>
+        </property>
+        <attribute name="title">
+         <string>Nuclear</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="text">
+              <string>Frequency Guess (GHz)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="freqIn2">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+             </property>
+             <property name="text">
+              <string>2.189</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Split Guess (MHz)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="splitIn">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+             </property>
+             <property name="text">
+              <string>3</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_19">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Amp 2</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="amp2In">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+             </property>
+             <property name="text">
+              <string>0.05</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_18">
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Amp 1</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="amp1In">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+             </property>
+             <property name="text">
+              <string>0.05</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_20">
+           <item>
+            <widget class="QLabel" name="label_21">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Linewidth 1 (MHz)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line1In">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+             </property>
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QLabel" name="label_22">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Linewidth 2 (MHz)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="line2In">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0 8px;
+    
+    selection-background-color: darkgray;
+}</string>
+             </property>
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
+       <item>
+        <widget class="QCheckBox" name="refitRow">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(101, 139, 247); </string>
+         </property>
+         <property name="text">
+          <string>refit row?</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="reFitButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Re Fit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="saveButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Save Fit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>320</y>
+      <width>201</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_25">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="hideButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Hide fit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="unhideButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+         </property>
+         <property name="text">
+          <string>Unhide fit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(99, 137, 243)
+</string>
+       </property>
+       <property name="text">
+        <string>Sample details</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser">
+       <property name="styleSheet">
+        <string notr="true">QTextBrowser{
+	border-style:solid;
+    border-width: 4px;
+  border-width: 2px;
+    border-radius: 7px;
+	border-color: rgb(101, 139, 247);
+	color: rgb(101, 139, 247)
+
+
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="plotMap">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    
+	background-color:rgb(51, 54, 58);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: rgb(101, 139, 247);
+    font: bold 10px;
+	color: rgb(101, 139, 247);
+    
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: rgb(224, 0, 0);
+    border-style: inset;
+	fontcolor: rgb(101, 139, 247)
+}</string>
+       </property>
+       <property name="text">
+        <string>Plot Map</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="PlotWidget" name="graphWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>451</width>
+      <height>291</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="GraphicsLayoutWidget" name="graphWidget2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>441</width>
+      <height>291</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+  <customwidget>
+   <class>GraphicsLayoutWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
