@@ -284,3 +284,13 @@ def nucl_odmr_fit(freqs, odmr_data, freq_guess=None, split_guess=None, amp1_gues
         return opt_pars, cov_mat, fitted_data, fail_fit_flag, freq_guess
     else:
         return opt_pars, cov_mat, fitted_data, fail_fit_flag
+    
+
+def norm_m1_1(data):
+    return (2*(data-np.min(data))/(np.max(data)-np.min(data)))-1
+
+def norm01(data):
+    return (data-np.min(data))/(np.max(data)-np.min(data))
+
+def mean_norm(data):
+    return data/np.mean(data)
