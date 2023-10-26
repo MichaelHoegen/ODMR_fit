@@ -154,21 +154,13 @@ def load_magscan(direc):
     '''
 
     if direc.endswith('.hdf5'):
-        print('0')
         file = h5py.File(direc, 'r')
-        print('1')
         x_axis = np.array(file['magscan x axis'])  # in nm
-        print('2')
         y_axis = np.array(file['magscan y axis'])  # in nm
-        print('3')
         freqs = np.array(file['Frequencies']) * 1e9  # in Hz
-        print('4')
         fulldata_matrix = file['ESR Data']
-        print('5')
         retrace = file['ESR Data Retrace']
-        print('6')
         meta = file.attrs.get('Tip No.')#.decode('ascii')
-        print('7')
         meta += '\n'
         meta += file.attrs.get('Comments')#.decode('ascii')
         meta += '\n'
