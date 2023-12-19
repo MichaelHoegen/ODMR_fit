@@ -116,6 +116,7 @@ class Fit(QMainWindow):
 
     def onclick(self, event):
         self.new_freq = self.graphWidget.plotItem.vb.mapSceneToView(event.scenePos()).x()
+        self.new_freq *= 1e9
         # self.new_freq = event.scenePos().x()
         print(self.new_freq)
 
@@ -151,7 +152,6 @@ class Fit(QMainWindow):
     def nextCol_function(self):
         if self.col <(self.fullESR_data.shape[1]-1):
             self.col = self.col + 1
-            print(self.col)
             self.update_plots()
         else:
             print('End of row!')
@@ -160,7 +160,6 @@ class Fit(QMainWindow):
     def prevCol_function(self):
         if self.col>0:
             self.col = self.col-1
-            print(self.col)
             self.update_plots()
         else:
             print('Start of row!')
@@ -169,7 +168,6 @@ class Fit(QMainWindow):
     def nextRow_function(self):
         if self.row < self.fullESR_data.shape[0]-1:
             self.row = self.row+1
-            print(self.row)
             self.update_plots()
         else:
             print('Last row!')
@@ -178,7 +176,6 @@ class Fit(QMainWindow):
     def prevRow_function(self):
         if self.row >0:
             self.row = self.row-1
-            print(self.row)
             self.update_plots()
         else:
             print('First row!')
